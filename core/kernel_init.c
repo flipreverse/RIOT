@@ -18,6 +18,7 @@
  *
  * @}
  */
+#include "periph/pm.h"
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -27,7 +28,6 @@
 #include "irq.h"
 #include "log.h"
 
-#include "periph/pm.h"
 
 #ifdef MODULE_SCHEDSTATISTICS
 #include "sched.h"

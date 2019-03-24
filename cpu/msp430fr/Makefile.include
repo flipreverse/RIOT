@@ -1,3 +1,7 @@
 include $(RIOTCPU)/msp430_common/Makefile.include
 
+export TARGET_ARCH = msp430-elf
+COMPILER_PATH = $(shell which $(TARGET_ARCH)-gcc)
+INCLUDES += -I $(shell dirname $(COMPILER_PATH))/../include
+export LINKFLAGS += -Wl,--library-path=$(shell dirname $(COMPILER_PATH))/../include
 export USEMODULE += periph periph_common stdio_uart

@@ -112,7 +112,7 @@ void uart_poweroff(uart_t uart)
     (void)uart;
     UART_ME &= ~(UART_ME_BITS);
 }
-
+#if 0
 ISR(UART_RX_ISR, isr_uart_0_rx)
 {
     __enter_isr();
@@ -127,7 +127,7 @@ ISR(UART_RX_ISR, isr_uart_0_rx)
 
     __exit_isr();
 }
-
+#endif
 /* we use alternative UART code in case the board used the USCI module for UART
  * in case of the (older) USART module */
 #else
@@ -202,7 +202,7 @@ void uart_poweroff(uart_t uart)
     (void)uart;
     /* n/a */
 }
-
+#if 0
 ISR(UART_RX_ISR, isr_uart_0_rx)
 {
     __enter_isr();
@@ -221,5 +221,5 @@ ISR(UART_RX_ISR, isr_uart_0_rx)
 
     __exit_isr();
 }
-
+#endif
 #endif
