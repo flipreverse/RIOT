@@ -1,4 +1,5 @@
 x Make new board/cpu compile+link
-2. Copy cpu-specific flags
-3. Create a valid hex file
+x Copy cpu-specific flags
+x Create a valid hex file
 4. Add cmd for flashing the hex file
+5. Make launchpad work
