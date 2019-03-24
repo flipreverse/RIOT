@@ -1,0 +1,4 @@
+1. Make new board/cpu compile+link
+2. Copy cpu-specific flags
+3. Create a valid hex file
+4. Add cmd for flashing the hex file
