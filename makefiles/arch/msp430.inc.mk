@@ -2,7 +2,7 @@
 export TARGET_ARCH ?= msp430
 
 # define build specific options
-CFLAGS_CPU   = -mmcu=$(CPU_MODEL)
+CFLAGS_CPU   = -mcpu=430x -mmcu=$(CPU_MODEL)
 # default std set to gnu99 of not overwritten by user
 ifeq (, $(filter -std=%, $(CFLAGS)))
   export CFLAGS += -std=gnu99
