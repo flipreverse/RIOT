@@ -3,4 +3,5 @@ x Copy cpu-specific flags
 x Create a valid hex file
 x Add cmd for flashing the hex file
 x Make debugging work
-6. Make launchpad work
+6. Add a variable to switch between toolchains
+7. Make launchpad work
