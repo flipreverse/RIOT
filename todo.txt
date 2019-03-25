@@ -2,5 +2,5 @@ x Make new board/cpu compile+link
 x Copy cpu-specific flags
 x Create a valid hex file
 x Add cmd for flashing the hex file
-5. Make debugging work
+x Make debugging work
 6. Make launchpad work

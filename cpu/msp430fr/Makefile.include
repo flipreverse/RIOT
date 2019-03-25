@@ -1,7 +1,8 @@
 include $(RIOTCPU)/msp430_common/Makefile.include
 
 export TARGET_ARCH = msp430-elf
-COMPILER_PATH = $(shell which $(TARGET_ARCH)-gcc)
-INCLUDES += -I $(shell dirname $(COMPILER_PATH))/../include
-export LINKFLAGS += -Wl,--library-path=$(shell dirname $(COMPILER_PATH))/../include
+TIGCC_ABS_PATH = $(shell which $(TARGET_ARCH)-gcc)
+export TI_TOOLCHAIN_PATH = $(shell dirname $(TIGCC_ABS_PATH))/..
+INCLUDES += -I $(TI_TOOLCHAIN_PATH)/include
+export LINKFLAGS += -Wl,--library-path=$(TI_TOOLCHAIN_PATH)/include
 export USEMODULE += periph periph_common stdio_uart
