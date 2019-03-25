@@ -10,13 +10,8 @@ include $(RIOTMAKE)/tools/serial.inc.mk
 
 # setup flash tool
 export LD_LIBRARY_PATH = /opt/msp430/flasher/
-export PROGRAMMER ?= /opt/msp430/flasher/MSP430Flasher
-export MSPDEBUGFLAGS += -j $(PROGRAMMER)
-ifeq ($(strip $(PROGRAMMER)),uif)
-  export MSPDEBUGFLAGS += -d $(PORT)
-endif
-export FLASHER ?= mspdebug
-export FFLAGS = $(MSPDEBUGFLAGS) "prog $(HEXFILE)"
+export FLASHER ?= /opt/msp430/flasher/MSP430Flasher
+export FFLAGS = -w $(HEXFILE) -v
 
 # setup debugger
 export DEBUGSERVER = $(FLASHER)
